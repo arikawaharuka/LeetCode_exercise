@@ -15,7 +15,10 @@ public class MainTest {
             case 976 ->Test_0976(sc);
             case 1281->Test_1281(sc);
             case 1491->Test_1491(sc);
+            case 1502->Test_1502(sc);
             case 1523->Test_1523(sc);
+            case 1779->Test_1779(sc);
+            case 1822->Test_1822(sc);
             default  ->Test_0000();
         }
 
@@ -99,5 +102,43 @@ public class MainTest {
         LargestPerimeterTriangle_0976 test0976=new LargestPerimeterTriangle_0976();
         int largestPerimeter=test0976.largestPerimeter(nums);
         System.out.println(largestPerimeter);
+    }
+
+    public static void Test_1779(Scanner sc){
+        int[][] points=new int[1][2];
+        System.out.println("输入坐标数组");
+        for (int i=0;i<1;i++){
+            points[i][0]= sc.nextInt();
+            points[i][1]= sc.nextInt();
+        }
+        System.out.println("输入x、y");
+        int x= sc.nextInt();
+        int y= sc.nextInt();
+        FindNearestPoint_1779 test1779=new FindNearestPoint_1779();
+        int minDistance=test1779.nearestValidPoint(x,y,points);
+        System.out.println(minDistance);
+    }
+
+    public static void Test_1502(Scanner sc){
+        int[] arr=new int[3];
+        for (int i=0;i<arr.length;i++){
+            arr[i]= sc.nextInt();
+        }
+        CanMakeArithmeticProgression_1502 test1502=new CanMakeArithmeticProgression_1502();
+        boolean isArithmeticProgression=test1502.canMakeArithmeticProgression(arr);
+        System.out.println(isArithmeticProgression);
+    }
+
+    public static void Test_1822(Scanner sc){
+        int[] nums=new int[5];//example1:7,example2,3:5
+        //example 1:-1,-2,-3,-4,3,2,1
+        //example 2:1,5,0,2,-3
+        //example 3:-1,1,-1,1,-1
+        for (int i=0;i<nums.length;i++){
+            nums[i]= sc.nextInt();
+        }
+        ArraySign_1822 test1822=new ArraySign_1822();
+        int arraySign=test1822.arraySign(nums);
+        System.out.println(arraySign);
     }
 }
