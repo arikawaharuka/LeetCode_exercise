@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class MainTest {
     public static void main(String[] args) {
-        //1491
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入测试题目：");
         int select=sc.nextInt();

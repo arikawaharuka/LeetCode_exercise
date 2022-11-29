@@ -9,7 +9,7 @@ public class SqrtX_0069 {
             if ((long)mid*mid<=x){
                 result=mid;
                 low=mid+1;
-            }else {
+            } else {
                 high=mid-1;
             }
         }
