@@ -10,6 +10,7 @@ public class MainTest {
         int select=sc.nextInt();
         switch (select){
             case 29  ->Test_0029(sc);
+            case 69  ->Test_0069(sc);
             case 191 ->Test_0191(sc);
             case 367 ->Test_0367(sc);
             case 976 ->Test_0976(sc);
@@ -140,5 +141,12 @@ public class MainTest {
         ArraySign_1822 test1822=new ArraySign_1822();
         int arraySign=test1822.arraySign(nums);
         System.out.println(arraySign);
+    }
+
+    public static void Test_0069(Scanner sc){
+        int x= sc.nextInt();
+        SqrtX_0069 test0069=new SqrtX_0069();
+        int result= test0069.mySqrt(x);
+        System.out.println(result);
     }
 }
