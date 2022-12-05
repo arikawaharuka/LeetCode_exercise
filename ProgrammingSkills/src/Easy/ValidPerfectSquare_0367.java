@@ -1,7 +1,5 @@
 package Easy;
 
-import java.util.Scanner;
-
 public class ValidPerfectSquare_0367 {
     public boolean IsPerfectSquare_1(int num) {
         int rootNum =(int)Math.sqrt(num);

@@ -2,15 +2,14 @@ package Easy;
 
 public class AverageSalary_1491 {
     public double average(int[] salary) {
-        int maxSalary=salary[0];
         int minSalary=salary[0];
-        double sumSalary=0;
+        int maxSalary=salary[0];
         if (salary[0]>salary[1]){
             minSalary=salary[1];
         }else {
             maxSalary=salary[1];
         }
-        sumSalary=salary[0]+salary[1];
+        double sumSalary=salary[0]+salary[1];
         for (int i=2;i<salary.length;i++){
             if (salary[i]>maxSalary){
                 maxSalary=salary[i];
