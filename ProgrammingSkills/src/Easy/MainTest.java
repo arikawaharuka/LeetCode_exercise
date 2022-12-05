@@ -11,6 +11,7 @@ public class MainTest {
             case 29  ->Test_0029(sc);
             case 69  ->Test_0069(sc);
             case 191 ->Test_0191(sc);
+            case 202 ->Test_0202(sc);
             case 367 ->Test_0367(sc);
             case 976 ->Test_0976(sc);
             case 1281->Test_1281(sc);
@@ -18,6 +19,7 @@ public class MainTest {
             case 1502->Test_1502(sc);
             case 1523->Test_1523(sc);
             case 1779->Test_1779(sc);
+            case 1790->Test_1790(sc);
             case 1822->Test_1822(sc);
             default  ->Test_0000();
         }
@@ -147,5 +149,22 @@ public class MainTest {
         SqrtX_0069 test0069=new SqrtX_0069();
         int result= test0069.mySqrt(x);
         System.out.println(result);
+    }
+
+    public static void Test_0202(Scanner sc){
+        int number=sc.nextInt();
+        HappyNumber_0202 test0202=new HappyNumber_0202();
+        boolean isHappyNum=test0202.isHappy(number);
+        System.out.println(isHappyNum);
+        /*int sum=test0202.getNextNumber(number);
+        System.out.println(sum);*/
+    }
+
+    public static void Test_1790(Scanner sc){
+        String s1=sc.next();
+        String s2=sc.next();
+        CheckStringSwapEqual_1790 test_1790=new CheckStringSwapEqual_1790();
+        boolean isEqual=test_1790.areAlmostEqual(s1,s2);
+        System.out.println(isEqual);
     }
 }
