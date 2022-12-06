@@ -1,5 +1,6 @@
 package Easy;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainTest {
@@ -12,12 +13,14 @@ public class MainTest {
             case 69  ->Test_0069(sc);
             case 191 ->Test_0191(sc);
             case 202 ->Test_0202(sc);
+            case 283 ->Test_0283(sc);
             case 367 ->Test_0367(sc);
             case 976 ->Test_0976(sc);
             case 1281->Test_1281(sc);
             case 1491->Test_1491(sc);
             case 1502->Test_1502(sc);
             case 1523->Test_1523(sc);
+            case 1672->Test_1672(sc);
             case 1779->Test_1779(sc);
             case 1790->Test_1790(sc);
             case 1822->Test_1822(sc);
@@ -163,8 +166,36 @@ public class MainTest {
     public static void Test_1790(Scanner sc){
         String s1=sc.next();
         String s2=sc.next();
-        CheckStringSwapEqual_1790 test_1790=new CheckStringSwapEqual_1790();
-        boolean isEqual=test_1790.areAlmostEqual(s1,s2);
+        CheckStringSwapEqual_1790 test1790=new CheckStringSwapEqual_1790();
+        boolean isEqual=test1790.areAlmostEqual(s1,s2);
         System.out.println(isEqual);
+    }
+
+    public static void Test_1672(Scanner sc){
+        System.out.println("请输入总人数：");
+        int personCount=sc.nextInt();
+        System.out.println("请输入银行数量：");
+        int bankCount=sc.nextInt();
+        int [][]personAccount=new int[personCount][bankCount];
+        for (int i = 0; i < personCount; i++) {
+            for (int j = 0; j < bankCount; j++) {
+                personAccount[i][j]=sc.nextInt();
+            }
+        }
+        RichestCustomerWealth_1672 test1672=new RichestCustomerWealth_1672();
+        int maxWealth=test1672.maximumWealth(personAccount);
+        System.out.println(maxWealth);
+    }
+
+    public static void Test_0283(Scanner sc){
+        System.out.println("请输入数组长度");
+        int length= sc.nextInt();
+        int []nums=new int[length];
+        for (int i = 0; i <nums.length ; i++) {
+            nums[i]= sc.nextInt();
+        }
+        MoveZeros_0283 test0283=new MoveZeros_0283();
+        test0283.moveZeroes(nums);
+        System.out.println(Arrays.toString(nums));
     }
 }
