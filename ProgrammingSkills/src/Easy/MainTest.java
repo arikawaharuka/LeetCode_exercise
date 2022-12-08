@@ -15,7 +15,9 @@ public class MainTest {
             case 202 ->Test_0202(sc);
             case 283 ->Test_0283(sc);
             case 367 ->Test_0367(sc);
+            case 496 ->Test_0496(sc);
             case 976 ->Test_0976(sc);
+            case 1232->Test_1232(sc);
             case 1281->Test_1281(sc);
             case 1491->Test_1491(sc);
             case 1502->Test_1502(sc);
@@ -197,5 +199,39 @@ public class MainTest {
         MoveZeros_0283 test0283=new MoveZeros_0283();
         test0283.moveZeroes(nums);
         System.out.println(Arrays.toString(nums));
+    }
+
+    public static void Test_0496(Scanner sc){
+        int length1=sc.nextInt();
+        int length2=sc.nextInt();
+        int[] nums1=new int[length1];
+        int[] nums2=new int[length2];
+        for (int i = 0; i < nums1.length; i++) {
+            nums1[i]=sc.nextInt();
+        }
+        for (int i = 0; i < nums2.length; i++) {
+            nums2[i]=sc.nextInt();
+        }
+        NextGreaterElement_0496 test0496=new NextGreaterElement_0496();
+        int[] result=new int[length1];
+        Arrays.fill(result, -1);
+        result= test0496.nextGreaterElement(nums1,nums2);
+        System.out.println(Arrays.toString(result));
+        result=test0496.nextGreaterElement_2(nums1,nums2);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static void Test_1232(Scanner sc){
+        System.out.println("请输入点的个数");
+        int count= sc.nextInt();
+        int[][] coordinates=new int[count][2];
+        System.out.println("输入坐标数组");
+        for (int i=0;i<count;i++){
+            coordinates[i][0]= sc.nextInt();
+            coordinates[i][1]= sc.nextInt();
+        }
+        CheckStraightLine_1232 test1232=new CheckStraightLine_1232();
+        boolean isLine=test1232.checkStraightLine(coordinates);
+        System.out.println(isLine);
     }
 }
