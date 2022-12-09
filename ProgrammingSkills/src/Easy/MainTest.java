@@ -9,12 +9,14 @@ public class MainTest {
         System.out.println("请输入测试题目：");
         int select=sc.nextInt();
         switch (select){
+            case 1   ->Test_0001(sc);
             case 29  ->Test_0029(sc);
             case 69  ->Test_0069(sc);
             case 191 ->Test_0191(sc);
             case 202 ->Test_0202(sc);
             case 283 ->Test_0283(sc);
             case 367 ->Test_0367(sc);
+            case 476 ->Test_0476(sc);
             case 496 ->Test_0496(sc);
             case 976 ->Test_0976(sc);
             case 1232->Test_1232(sc);
@@ -22,6 +24,7 @@ public class MainTest {
             case 1491->Test_1491(sc);
             case 1502->Test_1502(sc);
             case 1523->Test_1523(sc);
+            case 1588->Test_1588(sc);
             case 1672->Test_1672(sc);
             case 1779->Test_1779(sc);
             case 1790->Test_1790(sc);
@@ -32,10 +35,9 @@ public class MainTest {
     }
 
     public static void Test_1491(Scanner sc) {
-        //int[] salary=new int[6]; //example 4:8000,9000,2000,3000,6000,1000
         //int[] salary=new int[4];//example 1:4000,3000,1000,2000
         int[] salary=new int[3];//example 2:1000,2000,3000
-        //int[] salary=new int[6];//example 3:6000,5000,4000,3000,2000,1000
+        //int[] salary=new int[6];//example 3:6000,5000,4000,3000,2000,1000 example 4:8000,9000,2000,3000,6000,1000
 
         for (int i=0;i<salary.length;i++){
             salary[i]=sc.nextInt();
@@ -161,8 +163,6 @@ public class MainTest {
         HappyNumber_0202 test0202=new HappyNumber_0202();
         boolean isHappyNum=test0202.isHappy(number);
         System.out.println(isHappyNum);
-        /*int sum=test0202.getNextNumber(number);
-        System.out.println(sum);*/
     }
 
     public static void Test_1790(Scanner sc){
@@ -233,5 +233,41 @@ public class MainTest {
         CheckStraightLine_1232 test1232=new CheckStraightLine_1232();
         boolean isLine=test1232.checkStraightLine(coordinates);
         System.out.println(isLine);
+    }
+
+    public static void Test_1588(Scanner sc){
+        System.out.println("请输入数组长度");
+        int length=sc.nextInt();
+        int[] arr=new int[length];
+        for (int i = 0; i <arr.length ; i++) {
+            arr[i]=sc.nextInt();
+        }
+        SumOddLengthSubArrays_1588 test1588=new SumOddLengthSubArrays_1588();
+        int sum= test1588.sumOddLengthSubArrays(arr);
+        System.out.println(sum);
+    }
+
+    public static void Test_0476(Scanner sc){
+        int num= sc.nextInt();
+        NumberComplement_0476 test0476=new NumberComplement_0476();
+        int result=test0476.findComplement(num);
+        System.out.println(result);
+    }
+
+    public static void Test_0001(Scanner sc){
+        System.out.println("请输入target");
+        int target=sc.nextInt();
+        System.out.println("请输入数组长度");
+        int length=sc.nextInt();
+        int[] nums=new int[length];
+        for (int i = 0; i < length; i++) {
+            nums[i]= sc.nextInt();
+        }
+        SumTwoNumber_0001 test0001=new SumTwoNumber_0001();
+        int[] result;
+        result=test0001.twoSum(nums,target);
+        System.out.println(Arrays.toString(result));
+        result=test0001.twoSumHash(nums,target);
+        System.out.println(Arrays.toString(result));
     }
 }
