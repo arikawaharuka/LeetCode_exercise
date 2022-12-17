@@ -14,15 +14,21 @@ public class MainTest {
             case 69  ->Test_0069(sc);
             case 191 ->Test_0191(sc);
             case 202 ->Test_0202(sc);
+            case 217 ->Test_0217(sc);
+            case 242 ->Test_0242(sc);
             case 283 ->Test_0283(sc);
             case 367 ->Test_0367(sc);
             case 389 ->Test_0389(sc);
             case 476 ->Test_0476(sc);
             case 496 ->Test_0496(sc);
             case 566 ->Test_0566(sc);
+            case 709 ->Test_0709(sc);
+            case 953 ->Test_0953(sc);
             case 976 ->Test_0976(sc);
             case 1232->Test_1232(sc);
             case 1281->Test_1281(sc);
+            case 1309->Test_1309(sc);
+            case 1356->Test_1356(sc);
             case 1491->Test_1491(sc);
             case 1502->Test_1502(sc);
             case 1523->Test_1523(sc);
@@ -42,6 +48,12 @@ public class MainTest {
     public static void TestTool_ArrayInput(Scanner sc,int[] array){
         for (int i = 0; i < array.length; i++) {
             array[i]= sc.nextInt();
+        }
+    }
+
+    public static void TestTool_ArrayInput(Scanner sc,String[] strings){
+        for (int i = 0; i < strings.length; i++) {
+            strings[i]= sc.next();
         }
     }
 
@@ -311,6 +323,61 @@ public class MainTest {
         String st=sc.next();
         FindDifference_0389 test0389=new FindDifference_0389();
         char result= test0389.findTheDifference(ss,st);
+        System.out.println(result);
+    }
+
+    public static void Test_0709(Scanner sc){
+        String s=sc.next();
+        ToLowerCase_0709 test0709=new ToLowerCase_0709();
+        String result=test0709.toLowerCase(s);
+        System.out.println(result);
+        String result_2=test0709.toLowerCase_2(s);
+        System.out.println(result_2);
+    }
+
+    public static void Test_1309(Scanner sc){
+        String s=sc.next();
+        DecryptStringAlphabetInteger_1309 test1309=new DecryptStringAlphabetInteger_1309();
+        String result=test1309.freqAlphabets(s);
+        System.out.println(result);
+    }
+
+    public static void Test_0953(Scanner sc){
+        System.out.println("请输入字符串组个数");
+        int count= sc.nextInt();
+        String[] s = new String[count];
+        TestTool_ArrayInput(sc,s);
+        String order=sc.next();
+        VerifyingAlienDictionary_0953 test0953=new VerifyingAlienDictionary_0953();
+        boolean isOrderly =test0953.isAlienSorted(s,order);
+        System.out.println(isOrderly);
+    }
+
+    public static void Test_1356(Scanner sc){
+        System.out.println("请输入数组长度");
+        int length=sc.nextInt();
+        int[] nums=new int[length];
+        TestTool_ArrayInput(sc,nums);
+        SortIntegersNumberByBits_1356 test1356=new SortIntegersNumberByBits_1356();
+        int[] result=test1356.sortByBits(nums);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static void Test_0217(Scanner sc){
+        System.out.println("请输入数组长度");
+        int length=sc.nextInt();
+        int[] nums=new int[length];
+        TestTool_ArrayInput(sc,nums);
+        ContainsDuplicate_0217 test0217=new ContainsDuplicate_0217();
+        boolean result= test0217.containsDuplicate(nums);
+        System.out.println(result);
+    }
+
+    public static void Test_0242(Scanner sc){
+        String s=sc.next();
+        String t=sc.next();
+        ValidAnagram_0242 test0242=new ValidAnagram_0242();
+        boolean result= test0242.isAnagram(s,t);
         System.out.println(result);
     }
 }
